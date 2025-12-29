@@ -11,6 +11,8 @@ def calculate_event_cost(participants, tent_capacity, tent_price, meal_price):
     food_cost = meal_price * participants
     total_cost = tent_cost + food_cost
 
+    return total_cost
+
 # Test your code here
 print("Testing Camping Logistics...")
 print(calculate_event_cost(10, 4, 25, 15))
