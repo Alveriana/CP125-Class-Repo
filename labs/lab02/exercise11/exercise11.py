@@ -4,8 +4,7 @@ def is_valid_multiple(amount):
     Checks if the amount is a multiple of RM10.
     """
     # TODO: Implement this function
-    if amount % 10 == 0:
-        return True
+    return amount > 0 and amount % 10 == 0
 
 
 def is_balance_sufficient(amount, balance):
@@ -13,8 +12,7 @@ def is_balance_sufficient(amount, balance):
     Checks if the balance is enough for the withdrawal.
     """
     # TODO: Implement this function
-    if balance >= amount:
-        return True
+    return balance >= amount
 
 def process_withdrawal(amount, balance):
     """
@@ -24,4 +22,10 @@ def process_withdrawal(amount, balance):
     Returns "Insufficient Funds" if balance is too low.
     """
     # TODO: Implement this function
-    pass
+    if not is_valid_multiple(amount):
+        return "Invalid Amount"
+    
+    if not is_balance_sufficient(amount, balance):
+        return "Insufficient Funds"
+    
+    return balance - amount
