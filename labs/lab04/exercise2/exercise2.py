@@ -18,10 +18,9 @@ def calculate_average(scores):
 
 def count_passing(scores, passing_mark):
     count = 0
-    for i in range(len(scores)):
-        if scores[i] >= passing_mark:
+    for i in range(len(passing_mark)):
+        if passing_mark[i] >= scores:
             count = count + 1
-            return count
     return count
 
 
