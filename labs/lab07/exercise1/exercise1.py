@@ -1,8 +1,14 @@
 def process_actions(catalog, actions):
     # TODO: Your code here
-    pass
+    for action, isbn in actions:
+        if isbn in catalog:
+            if action == "BORROW":
+                if catalog[isbn] > 0:
+                    catalog -= 1
+            elif action == "RETURN":
+                catalog += 1
 
-
+    return catalog
 
 catalog = {
     "978-A": 2,

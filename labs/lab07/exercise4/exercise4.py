@@ -1,7 +1,8 @@
 def apply_upgrade(current, upgrade):
     # TODO: Your code here
-    pass
-
+    merged_permission = current.copy
+    for permission, new_level in upgrade.items():
+        if 
 
 
 current = {"read": 2, "write": 1, "admin": 0}
