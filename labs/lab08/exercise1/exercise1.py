@@ -13,7 +13,12 @@ def filter_passing_scores(input_file, output_file):
         int: count of passing students
     """
     # TODO: Implement this function
-    pass
+    passing_count = 0
+    passing_students = []
+
+    f = open("labs/lab08/exercise1/data/scores.txt", "r")
+
+    for i in range ()
 
 
 # Test your code here

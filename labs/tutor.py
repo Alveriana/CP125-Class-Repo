@@ -159,14 +159,14 @@ song_artists = {
 print(remove_consecutive_artists(playlist, song_artists))
 print()'''
 
-def filter_products(products, preferred_categories, blocked_brands):
-    '''list_product = []
+'''def filter_products(products, preferred_categories, blocked_brands):
+    list_product = []
     for product_name, info in products.items():
         category = info["category"]
         brand = info["brand"]
         if category in preferred_categories and brand not in blocked_brands:
             list_product.append(product_name)
-    return list_product'''
+    return list_product
 
     list_product = []
     for item in products:
@@ -184,3 +184,85 @@ products = {
 preferred_categories = {"Electronics"}
 blocked_brands = {"Apple"}
 print(filter_products(products, preferred_categories, blocked_brands))
+
+def get_items_by_category(menu, category):
+    items = []
+    
+    for item_name, details in menu.items():
+        item_category, price = details
+        
+        if item_category == category:
+            items.append(item_name)
+    
+    return items
+'''
+
+#def validate_bundle(bundle, catalog):
+#    bundle_set = set(bundle)
+#    catalog_ids = set(catalog.keys())
+#    invalid_ids = bundle_set - catalog_ids
+#    return invalid_ids
+
+#def get_items_by_category(menu, category):
+#    items = []   
+#    for item_name, details in menu.items():
+#        item_category, price = details
+#        if item_category == category:
+#            items.append(item_name)
+#    return items
+'''menu = {
+    "Nasi Lemak": ("Main", 12.50),
+    "Teh Tarik": ("Drink", 3.00),
+    "Rendang": ("Main", 15.00),
+    "Cendol": ("Dessert", 5.50)
+}
+category = "Main"
+print(get_items_by_category(menu, category))'''
+
+#def collect_unique_tags(posts):
+#    unique_tags = []
+#    for item in posts:
+#        tags = item["tags"]
+#        for value in tags:
+#            unique_tags.append(value)
+#    return set(unique_tags)
+'''posts = [
+    {"title": "Python Tips", "tags": ["python", "coding", "tips"]},
+    {"title": "Web Dev Basics", "tags": ["html", "css", "coding"]},
+    {"title": "Data Science", "tags": ["python", "data"]}
+]
+print(collect_unique_tags(posts))'''
+
+#def contains_banned(message, banned_words):
+#    for word in message:
+#        if word in banned_words:
+#            return True
+#    return False
+'''message = ("hello", "this", "is", "spam", "content")
+banned_words = {"spam", "phishing", "scam"}
+print(contains_banned(message, banned_words))'''
+
+#def flag_critical_students(records):
+#    result = set()
+#    for student in records:
+#        name = student["name"]4
+#        scores = student["scores"]
+'''records = [
+    {"name": "Ali", "scores": [90, 75, 60, 50]},
+    {"name": "Sara", "scores": [80, 70, 65]},
+    {"name": "Bob", "scores": [70, 75, 80]},
+    {"name": "Dana", "scores": [100, 95, 90, 85, 60]}
+]'''
+
+#def find_available_seats(bookings, all_seats):
+#    booked_seats = set()
+#    for seat in bookings:
+#        booked_seats.add(seat)
+#    available = []
+#    for seat in all_seats:
+#        if seat not in booked_seats:
+#            available.append(seat)
+#    return available
+'''bookings = [("Ali", 12), ("Sara", 5), ("John", 8)]
+all_seats = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+print(find_available_seats(bookings, all_seats))'''

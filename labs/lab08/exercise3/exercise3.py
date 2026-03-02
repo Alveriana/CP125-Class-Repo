@@ -14,7 +14,13 @@ def calculate_order_total(products_file, order_file, output_file):
         float: grand total of all orders
     """
     # TODO: Implement this function
-    pass
+    f =  open(products_file, "r", newline="")
+    reader = csv.reader(f)
+
+    
+    for row in header:
+
+
 
 
 # Test your code here
