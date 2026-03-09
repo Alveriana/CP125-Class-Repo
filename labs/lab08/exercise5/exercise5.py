@@ -1,5 +1,6 @@
 # Lab 08 Exercise 5: Sales Summary
 # Write your code below:
+import csv
 
 def summarize_sales(input_file, output_file):
     """
@@ -13,7 +14,13 @@ def summarize_sales(input_file, output_file):
         tuple: (total, average, highest, lowest)
     """
     # TODO: Implement this function
-    pass
+    input = open(input_file, "r", newline="")
+    reader = csv.reader(input)
+
+    for row in reader:
+        product = row[0]
+        quantity = row[1]
+        price = row[2]
 
 
 # Test your code here
