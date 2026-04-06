@@ -1,13 +1,15 @@
 import pandas as pd
-import matplotlib.pyplot as plt
 
-def explore_data(filename):
-    df = pd.read_csv(filename)
+def explore_data(data):
+    df = pd.read_csv(data)
 
     total_students = len(df)
+
     subjects = ['Math', 'Science', 'English']
+
     math_average = round(df['Math'].mean(), 1)
-    highest_math_student = df.loc[df['Math'].idxmax(), 'Name']
+
+    highest_math_student = df.loc[df['Math'].idxmax()]['Name']
 
     return {
         "total_students": total_students,
